@@ -43,6 +43,8 @@ agent_created: true
 
 本 Skill 自带 `scripts/title.py`，把三条保护下沉成代码，不依赖模型自觉。仅适用于 sqlite 会话库的后端；其他平台仍用原生改名工具。
 
+三道保护的问题清单参考 `weibaohui/dsh-smart-title`（DeepSeek Harness 宿主插件，内置节流、长会话冻结、同题静默跳过、手动改名保护）；本版不引入其插件依赖，按本技能命名规范重写。
+
 ```bash
 title.py set --cwd "<当前工作区绝对路径>" --title "1113｜开发-某功能"
 ```

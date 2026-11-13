@@ -27,6 +27,15 @@ MMDD｜类型-核心事件
 
 命名规则与工作流来自上游原版；执行层脚本、平台元数据与本版文档由本仓库维护。二次分发请同时保留本表。
 
+## 设计参考
+
+执行层的三道保护——**节流、同题跳过、手动改名保护**——问题清单与设计思路参考自
+[weibaohui/dsh-smart-title](https://github.com/weibaohui/dsh-smart-title)：一个 DeepSeek Harness（`@deepseek-ai/dsh`）的会话智能标题插件，
+它用 LLM 每轮总结刷新标题，内置 `refreshMinIntervalMs` 刷新节流、长会话冻结、同题静默跳过与手动改名保护。
+
+本版**没有**引入它的插件机制——那是 dsh 宿主的进程内插件，依赖 `sessionTitle` 服务与 `ctx.llm`，换到别的 Agent 跑不起来。
+这里只借用它验证过的问题清单，按本技能的 `MMDD｜类型-核心事件` 规范重新实现成 `scripts/title.py` 的三道闸。
+
 ## 安装
 
 在 WorkBuddy 里：`专家·技能·连接器 → 技能 → 添加技能 → 上传技能`，选技能 ZIP 即可；从市场安装则直接搜「聊天标题管家」。
