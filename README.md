@@ -23,7 +23,7 @@ MMDD｜类型-核心事件
 | 来源 | 地址 | 内容 |
 | --- | --- | --- |
 | **上游原版** | https://github.com/cxcxy/chat-title-manager | 「MMDD｜类型-核心事件」命名规则、新聊天自动命名流程、历史批量规范六步法 |
-| **本版 v2.0.0** | 本仓库 | 在上游基础上新增 `scripts/title.py` 执行层：节流、同题跳过、手动改名保护 |
+| **本版 v2.0.0** | https://github.com/bafangseo/chat-title-manager | 在上游基础上新增 `scripts/title.py` 执行层：节流、同题跳过、手动改名保护 |
 
 命名规则与工作流来自上游原版；执行层脚本、平台元数据与本版文档由本仓库维护。二次分发请同时保留本表。
 
@@ -31,10 +31,16 @@ MMDD｜类型-核心事件
 
 在 WorkBuddy 里：`专家·技能·连接器 → 技能 → 添加技能 → 上传技能`，选技能 ZIP 即可；从市场安装则直接搜「聊天标题管家」。
 
-其他 Agent（以 Codex 为例），把本目录放到其 Skill 目录：
+也可以直接克隆到用户技能目录：
 
 ```bash
-git clone https://github.com/cxcxy/chat-title-manager.git "${CODEX_HOME:-$HOME/.codex}/skills/chat-title-manager"
+git clone https://github.com/bafangseo/chat-title-manager.git ~/.workbuddy/skills/chat-title-manager
+```
+
+其他 Agent（以 Codex 为例），把目标路径换掉即可：
+
+```bash
+git clone https://github.com/bafangseo/chat-title-manager.git "${CODEX_HOME:-$HOME/.codex}/skills/chat-title-manager"
 ```
 
 如果已有同名目录，先核对现有来源，不覆盖安装。安装后新开聊天，搜索“聊天标题规范”或输入 `$chat-title-manager`。
