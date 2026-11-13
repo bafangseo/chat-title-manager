@@ -115,4 +115,11 @@ python scripts/title.py unpin
 
 本仓库提供工作流程、命名规则，以及针对 sqlite 会话库的可选执行层（`scripts/title.py`）。其他应用取决于其是否提供原生改名工具：有则用原生工具，无则只输出建议标题或新旧对照，并明确说明未执行。
 
+## 致谢
+
+- [@cxcxy](https://github.com/cxcxy)——上游原版 [chat-title-manager](https://github.com/cxcxy/chat-title-manager)：`MMDD｜类型-核心事件` 命名规则、新聊天自动命名流程、历史批量规范六步法。
+- [@weibaohui](https://github.com/weibaohui)——[dsh-smart-title](https://github.com/weibaohui/dsh-smart-title)：节流、同题跳过、手动改名保护三道闸的问题清单与设计思路来源。
+
+本仓库的问题定位、脚本实现与文档由 [@bafangseo](https://github.com/bafangseo) 维护。
+
 本地结构与安装入口校验不代表所有应用均已完成真实新聊天或历史批量操作验证。
